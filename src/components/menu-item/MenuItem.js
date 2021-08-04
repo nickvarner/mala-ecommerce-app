@@ -1,20 +1,26 @@
 import React from 'react';
 import '../../styles/components/menu-item.scss';
+import { Link, withRouter } from 'react-router-dom';
 
-const MenuItem = ({ title, imgUrl, size }) => {
+const MenuItem = ({ size, imgUrl, title, linkUrl }) => {
 	return (
-		<div
-			className={`${size} menu-item`}
-			style={{
-				backgroundImage : `url(${imgUrl})`,
-				objectFit       : 'contain'
-			}}>
+		<div className={`${size} menu-item`}>
+			<div
+				className='background-image'
+				style={{
+					backgroundImage : `url(${imgUrl})`,
+					objectFit       : 'contain'
+				}}
+			/>
 			<div className='content'>
 				<h1 className='title'>{title}</h1>
-				<span className='subtitle'>shop now</span>
+
+				<Link to={`/${linkUrl}`}>
+					<span className='subtitle'>shop now</span>
+				</Link>
 			</div>
 		</div>
 	);
 };
 
-export default MenuItem;
+export default withRouter(MenuItem);
