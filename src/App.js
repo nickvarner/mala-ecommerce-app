@@ -1,15 +1,20 @@
 import React from 'react';
 import Landing from './pages/Landing';
 import { Route, Switch } from 'react-router-dom';
-import Bracelets from './pages/Bracelets';
+import Header from './components/header/Header';
+import ShopPage from './pages/shop-page/ShopPage';
+import { Container } from 'semantic-ui-react';
 
 function App () {
 	return (
 		<div>
-			<Switch>
-				<Landing />
-				<Route exact path='/bracelets' component={Bracelets} />
-			</Switch>
+			<Container>
+				<Header />
+				<Switch>
+					<Route exact path='/' component={Landing} />
+					<Route path='/shop' component={ShopPage} />
+				</Switch>
+			</Container>
 		</div>
 	);
 }

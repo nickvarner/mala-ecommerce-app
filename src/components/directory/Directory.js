@@ -8,7 +8,7 @@ import ringImg from '../../images/ring/dalmatian-and-jasper-gold/gold2.jpg';
 import strandImg from '../../images/strand/amazonite/amazonite1.jpg';
 
 const Directory = () => {
-	const [ sections, setSections ] = React.useState([
+	const [ sections ] = React.useState([
 		{
 			title   : 'bracelets',
 			imgUrl  : braceletImg,

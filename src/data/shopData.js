@@ -6,7 +6,7 @@ const SHOP_DATA = [
 		items     : [
 			{
 				id       : 1,
-				name     : 'turquoise and amazonite stretch',
+				name     : 'Turquoise and Amazonite Stretch',
 				imageUrl : '/images/bracelet/turquoise-and-amazonite-stretch/turquoise1.jpg',
 				price    : 28
 			},
