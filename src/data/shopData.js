@@ -1,3 +1,22 @@
+import turquoiseBracelet from '../images/bracelet/turquoise-and-amazonite-stretch/turquoise1.jpg';
+import citrineChandelierNecklace from '../images/necklace/citrine-chandelier/citrine1.jpg';
+import garnetChandelierNecklace from '../images/necklace/garnet-chandelier/garnet1.jpg';
+import cowrieNecklace from '../images/necklace/cowrie/cowrie1.jpg';
+import myceliumNecklace from '../images/necklace/mycelium/mycelium2.jpg';
+import dalmatianJasperCopper from '../images/ring/dalmatian-and-jasper-copper/jasper-copper-1.jpg';
+import dalmatianJasperGold from '../images/ring/dalmatian-and-jasper-gold/gold1.jpg';
+import rosewoodRing from '../images/ring/rosewood/rosewood1.jpg';
+import motherOfPearlsStrand from '../images/strand/mother-of-pearls-chips/strand1.jpg';
+import amazoniteStrand from '../images/strand/amazonite/amazonite1.jpg';
+import dalmatianJasperStrand from '../images/strand/dalmatian-jasper/dalmatian1.jpg';
+import customMala from '../images/custom-mala/custom1.jpg';
+import customMala2 from '../images/custom-mala/custom2.jpg';
+import customMala3 from '../images/custom-mala/custom3.jpg';
+import customMala4 from '../images/custom-mala/custom4.jpg';
+import customMala5 from '../images/custom-mala/custom5.jpg';
+import customMala6 from '../images/custom-mala/custom6.jpg';
+import customMala7 from '../images/custom-mala/custom7.jpg';
+
 const SHOP_DATA = [
 	{
 		id        : 1,
@@ -6,57 +25,9 @@ const SHOP_DATA = [
 		items     : [
 			{
 				id       : 1,
-				name     : 'Turquoise and Amazonite Stretch',
-				imageUrl : '/images/bracelet/turquoise-and-amazonite-stretch/turquoise1.jpg',
+				name     : 'turquoise and amazonite stretch',
+				imageUrl : turquoiseBracelet,
 				price    : 28
-			},
-			{
-				id       : 2,
-				name     : 'Blue Beanie',
-				imageUrl : 'https://i.ibb.co/ypkgK0X/blue-beanie.png',
-				price    : 18
-			},
-			{
-				id       : 3,
-				name     : 'Brown Cowboy',
-				imageUrl : 'https://i.ibb.co/QdJwgmp/brown-cowboy.png',
-				price    : 35
-			},
-			{
-				id       : 4,
-				name     : 'Grey Brim',
-				imageUrl : 'https://i.ibb.co/RjBLWxB/grey-brim.png',
-				price    : 25
-			},
-			{
-				id       : 5,
-				name     : 'Green Beanie',
-				imageUrl : 'https://i.ibb.co/YTjW3vF/green-beanie.png',
-				price    : 18
-			},
-			{
-				id       : 6,
-				name     : 'Palm Tree Cap',
-				imageUrl : 'https://i.ibb.co/rKBDvJX/palm-tree-cap.png',
-				price    : 14
-			},
-			{
-				id       : 7,
-				name     : 'Red Beanie',
-				imageUrl : 'https://i.ibb.co/bLB646Z/red-beanie.png',
-				price    : 18
-			},
-			{
-				id       : 8,
-				name     : 'Wolf Cap',
-				imageUrl : 'https://i.ibb.co/1f2nWMM/wolf-cap.png',
-				price    : 14
-			},
-			{
-				id       : 9,
-				name     : 'Blue Snapback',
-				imageUrl : 'https://i.ibb.co/X2VJP2W/blue-snapback.png',
-				price    : 16
 			}
 		]
 	},
@@ -68,50 +39,26 @@ const SHOP_DATA = [
 			{
 				id       : 1,
 				name     : 'Citrine Chandelier Necklace',
-				imageUrl : '/images/necklace/citrine-chandelier/citrine1.jpg',
+				imageUrl : citrineChandelierNecklace,
 				price    : 58
 			},
 			{
 				id       : 2,
 				name     : 'Garnet Chandelier Necklace',
-				imageUrl : '/images/necklace/garnet-chandelier/garnet1.jpg',
+				imageUrl : garnetChandelierNecklace,
 				price    : 58
 			},
 			{
 				id       : 3,
 				name     : 'Cowrie Necklace',
-				imageUrl : '/images/necklace/cowrie/cowrie1.jpg',
+				imageUrl : cowrieNecklace,
 				price    : 38
 			},
 			{
 				id       : 4,
 				name     : 'Mycelium Necklace',
-				imageUrl : '/images/necklace/mycelium/mycelium1.jpg',
+				imageUrl : myceliumNecklace,
 				price    : 38
-			},
-			{
-				id       : 5,
-				name     : 'Nike Red High Tops',
-				imageUrl : 'https://i.ibb.co/QcvzydB/nikes-red.png',
-				price    : 160
-			},
-			{
-				id       : 6,
-				name     : 'Nike Brown High Tops',
-				imageUrl : 'https://i.ibb.co/fMTV342/nike-brown.png',
-				price    : 160
-			},
-			{
-				id       : 7,
-				name     : 'Air Jordan Limited',
-				imageUrl : 'https://i.ibb.co/w4k6Ws9/nike-funky.png',
-				price    : 190
-			},
-			{
-				id       : 8,
-				name     : 'Timberlands',
-				imageUrl : 'https://i.ibb.co/Mhh6wBg/timberlands.png',
-				price    : 200
 			}
 		]
 	},
@@ -123,32 +70,20 @@ const SHOP_DATA = [
 			{
 				id       : 1,
 				name     : 'Dalmatian and Jasper Copper',
-				imageUrl : '/images/ring/dalmatian-and-jasper-copper/jasper-copper-1.jpg',
+				imageUrl : dalmatianJasperCopper,
 				price    : 22
 			},
 			{
 				id       : 2,
 				name     : 'Dalmatian and Jasper Gold',
-				imageUrl : '/images/ring/dalmatian-and-jasper-gold/gold1.jpg',
+				imageUrl : dalmatianJasperGold,
 				price    : 18
 			},
 			{
 				id       : 3,
 				name     : 'Rosewood',
-				imageUrl : '/images/ring/rosewood/rosewood1.jpg',
+				imageUrl : rosewoodRing,
 				price    : 15
-			},
-			{
-				id       : 4,
-				name     : 'Brown Shearling',
-				imageUrl : 'https://i.ibb.co/s96FpdP/brown-shearling.png',
-				price    : 165
-			},
-			{
-				id       : 5,
-				name     : 'Tan Trench',
-				imageUrl : 'https://i.ibb.co/M6hHc3F/brown-trench.png',
-				price    : 185
 			}
 		]
 	},
@@ -160,44 +95,20 @@ const SHOP_DATA = [
 			{
 				id       : 1,
 				name     : 'Mother of Pearl Chips Strand',
-				imageUrl : '/images/strand/mother-of-pearls-chips/strand1.jpg',
+				imageUrl : motherOfPearlsStrand,
 				price    : 78
 			},
 			{
 				id       : 2,
 				name     : 'Amazonite Strand',
-				imageUrl : '/images/strand/amazonite/amazonite1.jpg',
+				imageUrl : amazoniteStrand,
 				price    : 78
 			},
 			{
 				id       : 3,
 				name     : 'Dalmatian Jasper Strand',
-				imageUrl : '/images/strand/dalmatian-jasper/dalmatian1.jpg',
+				imageUrl : dalmatianJasperStrand,
 				price    : 88
-			},
-			{
-				id       : 4,
-				name     : 'Red Dots Dress',
-				imageUrl : 'https://i.ibb.co/N3BN1bh/red-polka-dot-dress.png',
-				price    : 80
-			},
-			{
-				id       : 5,
-				name     : 'Striped Sweater',
-				imageUrl : 'https://i.ibb.co/KmSkMbH/striped-sweater.png',
-				price    : 45
-			},
-			{
-				id       : 6,
-				name     : 'Yellow Track Suit',
-				imageUrl : 'https://i.ibb.co/v1cvwNf/yellow-track-suit.png',
-				price    : 135
-			},
-			{
-				id       : 7,
-				name     : 'White Blouse',
-				imageUrl : 'https://i.ibb.co/qBcrsJg/white-vest.png',
-				price    : 20
 			}
 		]
 	},
@@ -209,43 +120,43 @@ const SHOP_DATA = [
 			{
 				id       : 1,
 				name     : 'Sample 1',
-				imageUrl : '/images/custom-mala/custom1.jpg',
+				imageUrl : customMala,
 				price    : 108
 			},
 			{
 				id       : 2,
 				name     : 'Sample 2',
-				imageUrl : '/images/custom-mala/custom2.jpg',
+				imageUrl : customMala2,
 				price    : 108
 			},
 			{
 				id       : 3,
 				name     : 'Sample 3',
-				imageUrl : '/images/custom-mala/custom3.jpg',
+				imageUrl : customMala3,
 				price    : 108
 			},
 			{
 				id       : 4,
 				name     : 'Sample 4',
-				imageUrl : '/images/custom-mala/custom4.jpg',
+				imageUrl : customMala4,
 				price    : 108
 			},
 			{
 				id       : 5,
 				name     : 'Sample 5',
-				imageUrl : '/images/custom-mala/custom5.jpg',
+				imageUrl : customMala5,
 				price    : 108
 			},
 			{
 				id       : 6,
 				name     : 'Sample 6',
-				imageUrl : '/images/custom-mala/custom6.jpg',
+				imageUrl : customMala6,
 				price    : 108
 			},
 			{
 				id       : 7,
 				name     : 'Sample 7',
-				imageUrl : '/images/custom-mala/custom7.jpg',
+				imageUrl : customMala7,
 				price    : 108
 			}
 		]
