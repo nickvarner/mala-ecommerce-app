@@ -1,6 +1,8 @@
 import React from 'react';
-import { Button, Form } from 'semantic-ui-react';
+import { Button, Form, Icon } from 'semantic-ui-react';
 import '../../styles/components/form-styles.scss';
+
+import { signInWithGoogle } from '../../firebase/firebase.utils';
 
 const Register = () => {
 	const [ state, setState ] = React.useState({
@@ -79,8 +81,15 @@ const Register = () => {
 						error={{ content: 'your passwords must match', pointing: 'below' }}
 						onChange={(e) => handleChange(e)}
 					/>}
-				<Button primary>sign up</Button>
-				<Button secondary>sign in with google</Button>
+				<div className='buttons'>
+					<Button primary type='submit'>
+						sign up
+					</Button>
+					<Button secondary onClick={signInWithGoogle}>
+						<Icon name='google' />
+						sign in with google
+					</Button>
+				</div>
 			</Form>
 		</div>
 	);

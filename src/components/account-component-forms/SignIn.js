@@ -1,6 +1,8 @@
 import React from 'react';
-import { Form, Button } from 'semantic-ui-react';
+import { Form, Button, Icon } from 'semantic-ui-react';
 import '../../styles/components/form-styles.scss';
+
+import { signInWithGoogle } from '../../firebase/firebase.utils';
 
 const SignIn = () => {
 	const [ state, setState ] = React.useState({
@@ -44,8 +46,15 @@ const SignIn = () => {
 					autoComplete='password'
 					onChange={(e) => handleChange(e)}
 				/>
-				<Button primary>sign in</Button>
-				<Button secondary>sign in with google</Button>
+				<div className='buttons'>
+					<Button primary type='submit'>
+						sign in
+					</Button>
+					<Button secondary onClick={signInWithGoogle}>
+						<Icon name='google' />
+						sign in with google
+					</Button>
+				</div>
 			</Form>
 		</div>
 	);
