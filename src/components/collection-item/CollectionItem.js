@@ -1,6 +1,5 @@
 import React from 'react';
 import '../../styles/components/collection-item.scss';
-import { Card, Icon, Image } from 'semantic-ui-react';
 
 const CollectionItem = (props) => {
 	const { imageUrl, name, price } = props.item;
@@ -10,11 +9,11 @@ const CollectionItem = (props) => {
 				className='image'
 				style={{
 					backgroundImage : `url(${process.env.PUBLIC_URL + imageUrl})`
-				}}>
-				<div className='collection-footer'>
-					<span className='name'>{name}</span>
-					<span className='price'>{price}</span>
-				</div>
+				}}
+			/>
+			<div className='collection-footer'>
+				<span className='name'>{name}</span>
+				<span className='price'>${price}</span>
 			</div>
 		</div>
 	);

@@ -1,0 +1,24 @@
+$sub-color: grey;
+
+.group {
+	position: relative;
+	margin: 45px 0;
+	width: 30vw;
+
+	.form-input {
+		background: none;
+		background-color: white;
+		color: $sub-color;
+		font-size: 18px;
+		padding: 10px 10px 10px 5px;
+		display: block;
+		width: 100%;
+		border: none;
+		border-radius: 0;
+		margin: 25px 0;
+
+		&:focus {
+			outline: none;
+		}
+	}
+}

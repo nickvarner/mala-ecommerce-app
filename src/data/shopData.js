@@ -38,25 +38,25 @@ const SHOP_DATA = [
 		items     : [
 			{
 				id       : 1,
-				name     : 'Citrine Chandelier Necklace',
+				name     : 'Citrine Chandelier',
 				imageUrl : citrineChandelierNecklace,
 				price    : 58
 			},
 			{
 				id       : 2,
-				name     : 'Garnet Chandelier Necklace',
+				name     : 'Garnet Chandelier',
 				imageUrl : garnetChandelierNecklace,
 				price    : 58
 			},
 			{
 				id       : 3,
-				name     : 'Cowrie Necklace',
+				name     : 'Cowrie',
 				imageUrl : cowrieNecklace,
 				price    : 38
 			},
 			{
 				id       : 4,
-				name     : 'Mycelium Necklace',
+				name     : 'Mycelium',
 				imageUrl : myceliumNecklace,
 				price    : 38
 			}
@@ -94,19 +94,19 @@ const SHOP_DATA = [
 		items     : [
 			{
 				id       : 1,
-				name     : 'Mother of Pearl Chips Strand',
+				name     : 'Mother of Pearl Chips',
 				imageUrl : motherOfPearlsStrand,
 				price    : 78
 			},
 			{
 				id       : 2,
-				name     : 'Amazonite Strand',
+				name     : 'Amazonite',
 				imageUrl : amazoniteStrand,
 				price    : 78
 			},
 			{
 				id       : 3,
-				name     : 'Dalmatian Jasper Strand',
+				name     : 'Dalmatian Jasper',
 				imageUrl : dalmatianJasperStrand,
 				price    : 88
 			}
