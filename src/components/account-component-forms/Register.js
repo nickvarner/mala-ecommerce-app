@@ -1,9 +1,8 @@
 import React from 'react';
 import { Button, Form, Icon } from 'semantic-ui-react';
-import { auth, createUserProfileDocument } from '../../firebase/firebase.utils';
 import '../../styles/components/form-styles.scss';
 
-import { signInWithGoogle } from '../../firebase/firebase.utils';
+import { auth, createUserProfileDocument, signInWithGoogle } from '../../firebase/firebase.utils';
 
 const Register = ({ currentUser }) => {
 	const [ state, setState ] = React.useState({

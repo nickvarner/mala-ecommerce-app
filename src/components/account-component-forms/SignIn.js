@@ -2,7 +2,7 @@ import React from 'react';
 import { Form, Button, Icon } from 'semantic-ui-react';
 import '../../styles/components/form-styles.scss';
 
-import { signInWithGoogle } from '../../firebase/firebase.utils';
+import { auth, signInWithGoogle } from '../../firebase/firebase.utils';
 
 const SignIn = () => {
 	const [ state, setState ] = React.useState({
@@ -17,8 +17,20 @@ const SignIn = () => {
 		});
 	};
 
-	const handleSubmit = (e) => {
+	const handleSubmit = async (e) => {
 		e.preventDefault();
+
+		const { email, password } = state;
+
+		try {
+			await auth.signInWithEmailAndPassword(email, password);
+			setState({
+				email    : '',
+				password : ''
+			});
+		} catch (err) {
+			console.error(err.message);
+		}
 	};
 
 	return (
