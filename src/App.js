@@ -7,20 +7,41 @@ import { Container } from 'semantic-ui-react';
 import './styles/App.css';
 import SignInPage from './pages/sign-in-and-register-pages/SignInPage';
 import RegisterPage from './pages/sign-in-and-register-pages/RegisterPage';
-import { auth } from './firebase/firebase.utils';
+import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 
 const App = () => {
 	const [ currentUser, setCurrentUser ] = React.useState(null);
-	let unsubscribeFromAuth = null;
-	React.useEffect(
-		() => {
-			unsubscribeFromAuth = auth.onAuthStateChanged((user) => setCurrentUser(user));
-			return () => {
-				unsubscribeFromAuth();
-			};
-		},
-		[ currentUser ]
-	);
+
+	React.useEffect(() => {
+		let unsubscribeFromAuth = auth.onAuthStateChanged(async (userAuth) => {
+			if (userAuth) {
+				const userRef = await createUserProfileDocument(userAuth);
+
+				userRef.onSnapshot((snapShot) => {
+					setCurrentUser({
+						id : snapShot.id,
+						...snapShot.data()
+					});
+				});
+				console.log(currentUser);
+			} else {
+				setCurrentUser(userAuth);
+				console.log(currentUser);
+			}
+		});
+		return () => {
+			unsubscribeFromAuth();
+		};
+	}, []);
+	// React.useEffect(
+	// 	() => {
+	// 		unsubscribeFromAuth = auth.onAuthStateChanged((user) => setCurrentUser(user));
+	// 		return () => {
+	// 			unsubscribeFromAuth();
+	// 		};
+	// 	},
+	// 	[ currentUser ]
+	// );
 	return (
 		<div>
 			<Container>

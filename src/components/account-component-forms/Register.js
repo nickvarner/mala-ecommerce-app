@@ -1,11 +1,13 @@
 import React from 'react';
 import { Button, Form, Icon } from 'semantic-ui-react';
+import { auth, createUserProfileDocument } from '../../firebase/firebase.utils';
 import '../../styles/components/form-styles.scss';
 
 import { signInWithGoogle } from '../../firebase/firebase.utils';
 
-const Register = () => {
+const Register = ({ currentUser }) => {
 	const [ state, setState ] = React.useState({
+		displayName     : '',
 		email           : '',
 		password        : '',
 		passwordConfirm : ''
@@ -18,10 +20,28 @@ const Register = () => {
 			[name] : value
 		});
 	};
-	const [ passMatch, setPassMatch ] = React.useState(true);
-	const handleSubmit = (e) => {
+	const [ passMatch, setPassMatch ] = React.useState(false);
+	const handleSubmit = async (e) => {
 		e.preventDefault();
+		const { displayName, email, password } = state;
 		passwordMatch(state.password, state.passwordConfirm);
+		if (passMatch) {
+			try {
+				const { user } = await auth.createUserWithEmailAndPassword(email, password);
+				await createUserProfileDocument(user, { displayName });
+				setState({
+					displayName     : '',
+					email           : '',
+					password        : '',
+					passwordConfirm : ''
+				});
+			} catch (err) {
+				console.error(err.message);
+			}
+			console.log(state);
+		} else {
+			return;
+		}
 	};
 
 	const passwordMatch = (pass1, pass2) => {
@@ -35,6 +55,17 @@ const Register = () => {
 	return (
 		<div className='register group'>
 			<Form onSubmit={(e) => handleSubmit(e)}>
+				<Form.Input
+					className='form-input'
+					required
+					label='display name'
+					placeholder='display name'
+					type='displayName'
+					id='displayName'
+					name='displayName'
+					autoComplete='displayName'
+					onChange={(e) => handleChange(e)}
+				/>
 				<Form.Input
 					className='form-input'
 					required
