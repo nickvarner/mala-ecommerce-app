@@ -8,43 +8,40 @@ import './styles/App.css';
 import SignInPage from './pages/sign-in-and-register-pages/SignInPage';
 import RegisterPage from './pages/sign-in-and-register-pages/RegisterPage';
 import { auth, createUserProfileDocument } from './firebase/firebase.utils';
+import { setCurrentUser } from './redux/user/user.actions';
+import { useDispatch } from 'react-redux';
 
 const App = () => {
-	const [ currentUser, setCurrentUser ] = React.useState(null);
+	const dispatch = useDispatch();
+	React.useEffect(
+		() => {
+			let unsubscribeFromAuth = auth.onAuthStateChanged(async (userAuth) => {
+				if (userAuth) {
+					const userRef = await createUserProfileDocument(userAuth);
 
-	React.useEffect(() => {
-		let unsubscribeFromAuth = auth.onAuthStateChanged(async (userAuth) => {
-			if (userAuth) {
-				const userRef = await createUserProfileDocument(userAuth);
-
-				userRef.onSnapshot((snapShot) => {
-					setCurrentUser({
-						id : snapShot.id,
-						...snapShot.data()
+					userRef.onSnapshot((snapShot) => {
+						dispatch(
+							setCurrentUser({
+								id : snapShot.id,
+								...snapShot.data()
+							})
+						);
 					});
-				});
-			} else {
-				setCurrentUser(userAuth);
-				console.log(currentUser);
-			}
-		});
-		return () => {
-			unsubscribeFromAuth();
-		};
-	}, []);
-	// React.useEffect(
-	// 	() => {
-	// 		unsubscribeFromAuth = auth.onAuthStateChanged((user) => setCurrentUser(user));
-	// 		return () => {
-	// 			unsubscribeFromAuth();
-	// 		};
-	// 	},
-	// 	[ currentUser ]
-	// );
+				} else {
+					dispatch(setCurrentUser(userAuth));
+				}
+			});
+			return () => {
+				unsubscribeFromAuth();
+			};
+		},
+		[ dispatch ]
+	);
+
 	return (
 		<div>
 			<Container>
-				<Header currentUser={currentUser} />
+				<Header />
 				<Switch>
 					<Route exact path='/' component={Landing} />
 					<Route exact path='/signin' component={SignInPage} />
@@ -55,7 +52,5 @@ const App = () => {
 		</div>
 	);
 };
-
-// export default App
 
 export default App;
