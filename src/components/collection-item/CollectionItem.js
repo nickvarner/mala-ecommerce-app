@@ -1,9 +1,12 @@
 import React from 'react';
 import '../../styles/components/collection-item.scss';
 import { Button } from 'semantic-ui-react';
+import { useDispatch } from 'react-redux';
+import { addItem } from '../../redux/cart/cart.actions';
 
-const CollectionItem = (props) => {
-	const { imageUrl, name, price } = props.item;
+const CollectionItem = ({ item }) => {
+	const dispatch = useDispatch();
+	const { imageUrl, name, price } = item;
 	return (
 		<div className='collection-item'>
 			<div
@@ -15,7 +18,7 @@ const CollectionItem = (props) => {
 			<div className='collection-footer'>
 				<span className='name'>{name}</span>
 				<span className='price'>${price}</span>
-				<Button secondary className='collection-button'>
+				<Button secondary className='collection-button' onClick={() => dispatch(addItem(item))}>
 					add to cart
 				</Button>
 			</div>

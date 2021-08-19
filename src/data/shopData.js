@@ -37,25 +37,25 @@ const SHOP_DATA = [
 		routeName : 'necklaces',
 		items     : [
 			{
-				id       : 1,
+				id       : 2,
 				name     : 'Citrine Chandelier',
 				imageUrl : citrineChandelierNecklace,
 				price    : 58
 			},
 			{
-				id       : 2,
+				id       : 3,
 				name     : 'Garnet Chandelier',
 				imageUrl : garnetChandelierNecklace,
 				price    : 58
 			},
 			{
-				id       : 3,
+				id       : 4,
 				name     : 'Cowrie',
 				imageUrl : cowrieNecklace,
 				price    : 38
 			},
 			{
-				id       : 4,
+				id       : 5,
 				name     : 'Mycelium',
 				imageUrl : myceliumNecklace,
 				price    : 38
@@ -68,19 +68,19 @@ const SHOP_DATA = [
 		routeName : 'rings',
 		items     : [
 			{
-				id       : 1,
+				id       : 6,
 				name     : 'Dalmatian and Jasper Copper',
 				imageUrl : dalmatianJasperCopper,
 				price    : 22
 			},
 			{
-				id       : 2,
+				id       : 7,
 				name     : 'Dalmatian and Jasper Gold',
 				imageUrl : dalmatianJasperGold,
 				price    : 18
 			},
 			{
-				id       : 3,
+				id       : 8,
 				name     : 'Rosewood',
 				imageUrl : rosewoodRing,
 				price    : 15
@@ -93,19 +93,19 @@ const SHOP_DATA = [
 		routeName : 'strands',
 		items     : [
 			{
-				id       : 1,
+				id       : 9,
 				name     : 'Mother of Pearl Chips',
 				imageUrl : motherOfPearlsStrand,
 				price    : 78
 			},
 			{
-				id       : 2,
+				id       : 10,
 				name     : 'Amazonite',
 				imageUrl : amazoniteStrand,
 				price    : 78
 			},
 			{
-				id       : 3,
+				id       : 11,
 				name     : 'Dalmatian Jasper',
 				imageUrl : dalmatianJasperStrand,
 				price    : 88
@@ -118,43 +118,43 @@ const SHOP_DATA = [
 		routeName : 'custom',
 		items     : [
 			{
-				id       : 1,
+				id       : 12,
 				name     : 'Sample 1',
 				imageUrl : customMala,
 				price    : 108
 			},
 			{
-				id       : 2,
+				id       : 12,
 				name     : 'Sample 2',
 				imageUrl : customMala2,
 				price    : 108
 			},
 			{
-				id       : 3,
+				id       : 12,
 				name     : 'Sample 3',
 				imageUrl : customMala3,
 				price    : 108
 			},
 			{
-				id       : 4,
+				id       : 12,
 				name     : 'Sample 4',
 				imageUrl : customMala4,
 				price    : 108
 			},
 			{
-				id       : 5,
+				id       : 12,
 				name     : 'Sample 5',
 				imageUrl : customMala5,
 				price    : 108
 			},
 			{
-				id       : 6,
+				id       : 12,
 				name     : 'Sample 6',
 				imageUrl : customMala6,
 				price    : 108
 			},
 			{
-				id       : 7,
+				id       : 12,
 				name     : 'Sample 7',
 				imageUrl : customMala7,
 				price    : 108
