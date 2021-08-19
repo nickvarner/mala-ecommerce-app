@@ -1,27 +1,14 @@
 import React from 'react';
 import '../../styles/components/cart-dropdown.scss';
-import { Dropdown, Button } from 'semantic-ui-react';
-
-// const CartDropdown = () => {
-// 	return (
-// 		<div className='cart-dropdown'>
-// 			<Dropdown>
-// 				<Dropdown.Menu>
-// 					<div className='cart-items' />
-// 					<Dropdown.Divider />
-// 					<Dropdown.Item>
-// 						<Button secondary>go to checkout</Button>
-// 					</Dropdown.Item>
-// 				</Dropdown.Menu>
-// 			</Dropdown>
-// 		</div>
-// 	);
-// };
+import { Button } from 'semantic-ui-react';
+import CartItem from '../cart-item/CartItem';
+import { useSelector } from 'react-redux';
 
 const CartDropdown = () => {
+	const cartItems = useSelector((state) => state.cart.cartItems);
 	return (
 		<div className='cart-dropdown'>
-			<div className='cart-items' />
+			<div className='cart-items'>{cartItems.map((item) => <CartItem key={item.id} item={item} />)}</div>
 			<Button secondary>go to checkout</Button>
 		</div>
 	);
