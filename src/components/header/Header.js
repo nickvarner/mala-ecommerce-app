@@ -29,8 +29,8 @@ const Header = () => {
 					<Link to='/signin' className='option'>
 						sign in
 					</Link>}
-				<CartIcon className='option' />
-				{hidden && <CartDropdown className='option' />}
+				<CartIcon />
+				{hidden && <CartDropdown />}
 			</div>
 		</div>
 	);
