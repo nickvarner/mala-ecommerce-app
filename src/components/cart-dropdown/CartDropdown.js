@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../styles/components/cart-dropdown.scss';
-import { Button, Divider } from 'semantic-ui-react';
+import { Button } from 'semantic-ui-react';
 import { withRouter } from 'react-router-dom';
 import CartItem from '../cart-item/CartItem';
 import { useSelector, useDispatch } from 'react-redux';
