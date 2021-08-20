@@ -7,17 +7,12 @@ import { useDispatch, useSelector } from 'react-redux';
 const CartIcon = () => {
 	const dispatch = useDispatch();
 	const cartItems = useSelector((state) => state.cart.cartItems);
-	const total = (cartItems) => {
-		let sum = 0;
-		for (let i = 0; i < cartItems.length; i++) {
-			sum += cartItems[i].quantity;
-		}
-		return sum;
-	};
+	const itemCount = cartItems.reduce((acc, cartItem) => acc + cartItem.quantity, 0);
+
 	return (
 		<div className='cart-icon' onClick={() => dispatch(toggleCartHidden())}>
 			<ShoppingIcon className='shopping-icon' />
-			<span className='item-count'>{total(cartItems)}</span>
+			<span className='item-count'>{itemCount}</span>
 		</div>
 	);
 };

@@ -124,37 +124,37 @@ const SHOP_DATA = [
 				price    : 108
 			},
 			{
-				id       : 12,
+				id       : 13,
 				name     : 'Sample 2',
 				imageUrl : customMala2,
 				price    : 108
 			},
 			{
-				id       : 12,
+				id       : 14,
 				name     : 'Sample 3',
 				imageUrl : customMala3,
 				price    : 108
 			},
 			{
-				id       : 12,
+				id       : 15,
 				name     : 'Sample 4',
 				imageUrl : customMala4,
 				price    : 108
 			},
 			{
-				id       : 12,
+				id       : 16,
 				name     : 'Sample 5',
 				imageUrl : customMala5,
 				price    : 108
 			},
 			{
-				id       : 12,
+				id       : 17,
 				name     : 'Sample 6',
 				imageUrl : customMala6,
 				price    : 108
 			},
 			{
-				id       : 12,
+				id       : 18,
 				name     : 'Sample 7',
 				imageUrl : customMala7,
 				price    : 108

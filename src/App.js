@@ -1,15 +1,19 @@
 import React from 'react';
-import Landing from './pages/Landing';
+
 import { Route, Switch, Redirect } from 'react-router-dom';
-import Header from './components/header/Header';
-import ShopPage from './pages/shop-page/ShopPage';
-import { Container } from 'semantic-ui-react';
-import './styles/App.css';
-import SignInPage from './pages/sign-in-and-register-pages/SignInPage';
-import RegisterPage from './pages/sign-in-and-register-pages/RegisterPage';
 import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 import { setCurrentUser } from './redux/user/user.actions';
 import { useDispatch, useSelector } from 'react-redux';
+import { Container } from 'semantic-ui-react';
+
+import './styles/App.css';
+
+import SignInPage from './pages/sign-in-and-register-pages/SignInPage';
+import RegisterPage from './pages/sign-in-and-register-pages/RegisterPage';
+import Landing from './pages/Landing';
+import Header from './components/header/Header';
+import ShopPage from './pages/shop-page/ShopPage';
+import CheckoutPage from './pages/checkout/CheckoutPage';
 
 const App = () => {
 	const dispatch = useDispatch();
@@ -45,6 +49,7 @@ const App = () => {
 				<Header />
 				<Switch>
 					<Route exact path='/' component={Landing} />
+					<Route exact path='/checkout' component={CheckoutPage} />
 					<Route
 						exact
 						path='/signin'
