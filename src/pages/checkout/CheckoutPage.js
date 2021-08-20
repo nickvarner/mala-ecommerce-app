@@ -14,15 +14,17 @@ const CheckoutPage = () => {
 			<Table basic='very'>
 				<Table.Header className='checkout-header'>
 					<Table.Row textAlign='center'>
-						<Table.HeaderCell className='header-block'>Product</Table.HeaderCell>
-						<Table.HeaderCell className='header-block'>Description</Table.HeaderCell>
-						<Table.HeaderCell className='header-block'>Quantity</Table.HeaderCell>
-						<Table.HeaderCell className='header-block'>Price</Table.HeaderCell>
-						<Table.HeaderCell className='header-block'>Remove</Table.HeaderCell>
+						<Table.HeaderCell className='header-block'>product</Table.HeaderCell>
+						<Table.HeaderCell className='header-block'>description</Table.HeaderCell>
+						<Table.HeaderCell className='header-block'>quantity</Table.HeaderCell>
+						<Table.HeaderCell className='header-block'>price</Table.HeaderCell>
+						<Table.HeaderCell className='header-block'>remove</Table.HeaderCell>
 					</Table.Row>
 				</Table.Header>
 
-				<Table.Body>{checkOutItems && checkOutItems.map((item) => <CheckoutItem item={item} />)}</Table.Body>
+				<Table.Body>
+					{checkOutItems && checkOutItems.map((item) => <CheckoutItem item={item} key={item.id} />)}
+				</Table.Body>
 			</Table>
 			<Divider horizontal />
 			<div className='total'>${total}</div>
