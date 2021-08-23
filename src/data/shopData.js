@@ -17,8 +17,8 @@ import customMala5 from '../images/custom-mala/custom5.jpg';
 import customMala6 from '../images/custom-mala/custom6.jpg';
 import customMala7 from '../images/custom-mala/custom7.jpg';
 
-const SHOP_DATA = [
-	{
+const SHOP_DATA = {
+	bracelets : {
 		id        : 1,
 		title     : 'Bracelets',
 		routeName : 'bracelets',
@@ -31,7 +31,7 @@ const SHOP_DATA = [
 			}
 		]
 	},
-	{
+	necklaces : {
 		id        : 2,
 		title     : 'Necklaces',
 		routeName : 'necklaces',
@@ -62,7 +62,7 @@ const SHOP_DATA = [
 			}
 		]
 	},
-	{
+	rings     : {
 		id        : 3,
 		title     : 'Rings',
 		routeName : 'rings',
@@ -87,7 +87,7 @@ const SHOP_DATA = [
 			}
 		]
 	},
-	{
+	strands   : {
 		id        : 4,
 		title     : 'Strands',
 		routeName : 'strands',
@@ -112,7 +112,7 @@ const SHOP_DATA = [
 			}
 		]
 	},
-	{
+	custom    : {
 		id        : 5,
 		title     : 'Custom Mala',
 		routeName : 'custom',
@@ -161,6 +161,6 @@ const SHOP_DATA = [
 			}
 		]
 	}
-];
+};
 
 export default SHOP_DATA;

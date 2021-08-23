@@ -10,33 +10,33 @@ const INITIAL_STATE = {
 			title   : 'bracelets',
 			imgUrl  : braceletImg,
 			id      : 1,
-			linkUrl : 'bracelets'
+			linkUrl : 'shop/bracelets'
 		},
 		{
 			title   : 'strands',
 			imgUrl  : strandImg,
 			id      : 2,
-			linkUrl : 'strands'
+			linkUrl : 'shop/strands'
 		},
 		{
 			title   : 'rings',
 			imgUrl  : ringImg,
 			id      : 3,
-			linkUrl : 'rings'
+			linkUrl : 'shop/rings'
 		},
 		{
 			title   : 'necklaces',
 			imgUrl  : necklaceImg,
 			size    : 'large',
 			id      : 4,
-			linkUrl : 'necklaces'
+			linkUrl : 'shop/necklaces'
 		},
 		{
 			title   : 'custom mala',
 			imgUrl  : customImg,
 			size    : 'large',
 			id      : 5,
-			linkUrl : 'custommala'
+			linkUrl : 'shop/custom'
 		}
 	]
 };
