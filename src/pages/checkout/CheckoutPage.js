@@ -4,6 +4,7 @@ import { Table, Divider } from 'semantic-ui-react';
 import { useSelector } from 'react-redux';
 import { selectCartTotal } from '../../redux/cart/cart.selectors';
 import CheckoutItem from '../../components/checkout-item/CheckoutItem';
+import StripeButton from '../../components/stripe-button/StripeButton';
 
 const CheckoutPage = () => {
 	const checkOutItems = useSelector((state) => state.cart.cartItems);
@@ -28,6 +29,12 @@ const CheckoutPage = () => {
 			</Table>
 			<Divider horizontal />
 			<div className='total'>${total}</div>
+			<div className='test-warning'>
+				please use the following cc info for test payments:
+				<br />
+				4242 4242 4242 4242 exp: 01/22 ccv: 123
+			</div>
+			<StripeButton price={total} />
 		</div>
 	);
 };

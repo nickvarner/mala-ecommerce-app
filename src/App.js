@@ -10,7 +10,7 @@ import './styles/App.css';
 
 import SignInPage from './pages/sign-in-and-register-pages/SignInPage';
 import RegisterPage from './pages/sign-in-and-register-pages/RegisterPage';
-import Landing from './pages/Landing';
+import Landing from './pages/landing/Landing';
 import Header from './components/header/Header';
 import ShopPage from './pages/shop-page/ShopPage';
 import CheckoutPage from './pages/checkout/CheckoutPage';

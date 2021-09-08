@@ -1,14 +1,15 @@
 import React from 'react';
-import '../styles/pages/landing.styles.scss';
 import { Container } from 'semantic-ui-react';
-import Directory from '../components/directory/Directory';
+import Directory from '../../components/directory/Directory';
+
+import { LandingContainer } from './landing.styles';
 
 function Landing () {
 	return (
 		<Container>
-			<div className='Landing'>
+			<LandingContainer>
 				<Directory />
-			</div>
+			</LandingContainer>
 		</Container>
 	);
 }

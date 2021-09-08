@@ -5,26 +5,24 @@ import '../../styles/components/form-styles.scss';
 import { auth, signInWithGoogle } from '../../firebase/firebase.utils';
 
 const SignIn = () => {
-	const [ state, setState ] = React.useState({
+	const [ userCredentials, setCredentials ] = React.useState({
 		email    : '',
 		password : ''
 	});
 
 	const handleChange = (e) => {
-		setState({
-			...state,
+		setCredentials({
+			...userCredentials,
 			[e.target.name]: e.target.value
 		});
 	};
-
+	const { email, password } = userCredentials;
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 
-		const { email, password } = state;
-
 		try {
 			await auth.signInWithEmailAndPassword(email, password);
-			setState({
+			setCredentials({
 				email    : '',
 				password : ''
 			});
